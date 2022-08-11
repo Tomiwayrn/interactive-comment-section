@@ -18,9 +18,9 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL:(https://iridescent-brioche-9bcece.netlify.app)
+- Live Site URL:[Here](https://iridescent-brioche-9bcece.netlify.app)
 
-## My process
+
 
 ### Built with
 
@@ -34,4 +34,4 @@ Users should be able to:
 
 
 - Frontend Mentor - [@Tomiwayrn](https://www.frontendmentor.io/profile/Tomiwayrn)
-- Twitter - [@yAyo_YRN](https://www.twitter.com/Ayo_YRN)
+- Twitter - [@Ayo_YRN](https://www.twitter.com/Ayo_YRN)
