@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    color:hsl(211, 10%, 45%);
+    font-size: 16px;
+    font-family: 'Rubik',  sans-serif;
+}
+
+body {
+    position: relative;
+    background-color:  hsl(228, 33%, 97%);
+}
+
+.transition {
+    transition: 1s ease
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: .5s ease-in;
+}
+
+button{
+    border: none;
+    background: none;
+}
+
+.comments {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.comments-main {
+   background-color: white;
+   border-radius: 10px;
+   display: flex;
+   position: relative;
+   flex-direction: column;
+   padding: 20px;
+   margin-bottom: .6rem;
+   border: 1px solid hsl(223, 19%, 93%);
+}
+
+.comment-text {
+    color:hsl(211, 10%, 45%) ;
+    margin-bottom: 15px;
+}
+
+.interacting-score{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 20px;
+    width: 60px;
+    border-radius: 5px;
+    background-color: hsl(223, 19%, 93%);
+    color: hsl(238, 40%, 52%);
+    font-weight: 600;
+    
+
+}
+
+ .minus {
+    margin-bottom: 5px;
+} 
+
+.user-info {
+    display: flex;
+    gap: 10px;
+    line-height: 40px;
+    margin-bottom: 10px;
+    
+       
+}
+.username {
+    color: hsl(238, 40%, 52%);
+    font-weight: 600;
+
+}
+
+.user-info > img {
+    width: 40px;
+    height: 40px;
+}
+
+.reply-btn{
+    position: absolute;
+    bottom: 9%;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    right: 5%;
+}
+
+.reply-comment-area {
+    display: grid;
+    grid-template-columns:  1fr ;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid hsl(223, 19%, 93%);
+}
+
+.reply-comment{
+    grid-row-start: 1;
+    padding-top: 10px;
+    padding-bottom: 70px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-style: inherit;
+    border: .5px solid hsl(211, 10%, 45%);
+
+}
+
+.reply-comment:active{
+    appearance: none;
+    border: 1px solid hsl(212, 24%, 26%);
+}
+
+.reply-comment-area img {
+    grid-row-start: 3;
+}
+
+.reply-comment-area button, .save {
+    position: absolute; 
+    bottom: 10%;
+    right: 5%;
+    border: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    background-color: hsl(238, 40%, 52%);
+    color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+
+.edit {
+    width: 78%;
+}
+.save {
+    position: absolute;
+    bottom: 5%;
+}
+
+
+.you > p {
+    color: white;
+   
+    margin-top: 0px;
+    padding: 0 5px;
+    display: flex;
+    line-height: 16px;
+    font-size: 0.95rem;
+    
+}
+
+.you {
+    background-color: hsl(238, 40%, 52%);
+    height: 20px;
+    margin-top: 10px;
+    position: relative;
+  
+    
+}
+
+
+.reply-comment-area img {
+    height: 40px;
+    margin-top: 20px;
+}
+
+
+.replies-container {
+  
+    width: 97%;
+    font-size: 10px;
+    box-sizing: border-box; 
+    transform: translate(3%);
+     padding-left: 40px ; 
+    border-left: 1px solid hsl(223, 19%, 93%);
+}
+
+.replies-container > .comments-main {
+    margin-left: 10px;
+    height: 50%;
+}
+
+.buttons {
+    bottom:  6%;
+    right: 3%;
+    position: absolute;
+    display: flex;
+    gap: 9px;
+    
+ 
+}
+
+
+
+.buttons > button {
+    display: flex; 
+    margin-left: 7px;
+    gap: 6px;
+    letter-spacing: 1px;
+    font-size: 15px;
+    flex-direction: row-reverse;
+    font-weight: 600;
+}
+
+.modal-bg{
+    opacity:0.3;
+
+}
+
+.container {
+    position: relative;
+}
+.delete-modal {
+    background-color: rgba(20, 20, 20, 0.3);
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0%;
+    /* left: 50%; */ 
+     /* transform: translate(-50%,-50%);  */
+    display: flex;
+    align-content: center; 
+     justify-content: center; 
+     justify-items: center; 
+     z-index: 20;
+     
+} 
+
+.delete {
+    color: hsl(358, 79%, 66%);
+    font-weight: 400;
+}
+
+.delete-prompt {
+        
+     left: 50%;
+    top: 50%;     
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+    position: absolute;
+    padding: 20px;
+    border-radius: 9px;
+    border: 1px sold hsl(211, 10%, 45%);
+     transform: translate(-50%, -50%);    
+    background-color: white;
+}
+
+.delete-prompt p {
+    font-weight: 100;
+    margin-top: 13px;
+    margin-bottom: 15px;
+    
+}
+
+.prompt-btns {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.prompt-btns > button{
+    padding: 10px 10px;
+    font-size: .7rem;
+    border-radius: 7px;
+    text-transform: uppercase;
+}
+
+.cancel-btn {
+    color: white;
+    background-color:hsl(211, 10%, 45%) ;
+}
+
+.delete-btn {
+    background-color: hsl(358, 79%, 66%);
+    color: white;
+}
+
+.edited {
+    animation: new-element .7s ease ;
+}
+
+ .newbox{
+    animation: new-element .7s ease ;
+    
+}
+
+
+/* Animations for dynamic elements */
+@keyframes new-element {
+    0% {
+        transform: scale(0) ;
+        opacity: 0;
+          }
+    100% {
+        transform: scale(1) ;
+        opacity: 1;
+    }
+}
+
+
+
+@media screen and (min-width:768px) {
+   
+
+    .comments {
+        width: 80%;
+    }
+
+     .comments-main {
+        display: flex;
+        justify-content: start;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 30px;
+    } 
+
+   
+
+
+    .interacting-score{
+        display: flex;
+        flex-direction: column;
+        width: 6%;
+        border-radius: 6px;
+        text-align: center;
+        justify-content: enter;
+        align-items: center;
+        padding: 5px 0px;
+    
+    }
+
+    .reply-comment-area {
+        display: flex;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .reply-comment-area button {
+        position: relative;
+        padding: 10px 30px;
+        font-size: 14px;
+        bottom: 0%;
+        right: 0%;
+    }
+
+    .reply-comment-area img {
+        margin: 0;
+    }
+    
+    .reply-comment {
+        width: 100%;
+    }
+
+    .reply-btn{
+        position:absolute; 
+        /* top:  0%; */
+        bottom: 80%;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    
+    .comments-main-header {
+         width: 92%; 
+    }
+
+    .buttons {
+        top:  10%;
+        right: 3%;
+        position: absolute;
+        display: flex;
+        gap: 6px;
+        
+    }
+
+    .save {
+        top: "";
+        right: "";
+    }
+ }
+ /*
+
+@media  screen and(min-width:824px) {
+        .comments-main, .comments{
+            max-width: 200px;
+            display: none;
+        }
+} */
